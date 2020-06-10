@@ -50,6 +50,8 @@ Hacer que pueda haber caramelos de cualquier sabor. Cuando se construye el caram
 ### Caramelos con corazón de chocolate (Rellenos)
 Los caramelos con corazón de chocolate son caramelos que al recibir un mordisco, además de comportarse como todos los caramelos cambian su sabor a chocolate
 
+Además, su precio es de un peso más que el de los caramelos comunes.
+
 Indicar en cuál clase se encuentra el método que se ejecuta en cada caso, detallando el recorrido que realiza el method lookup.	
 
 ```

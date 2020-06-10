@@ -17,9 +17,10 @@ class Bombon {
 	method precio() { return 5 }
 	method peso() { return peso }
 	method mordisco() { peso = peso * 0.8 - 1 }
-	method gusto() { return frutilla }
+	method sabor() { return frutilla }
 	method libreGluten() { return true }
 }
+
 
 class Alfajor {
 	var peso = 15
@@ -27,7 +28,7 @@ class Alfajor {
 	method precio() { return 12 }
 	method peso() { return peso }
 	method mordisco() { peso = peso * 0.8 }
-	method gusto() { return chocolate }
+	method sabor() { return chocolate }
 	method libreGluten() { return false }
 }
 
@@ -37,7 +38,7 @@ class Caramelo {
 	method precio() { return 12 }
 	method peso() { return peso }
 	method mordisco() { peso = peso - 1 }
-	method gusto() { return frutilla }
+	method sabor() { return frutilla }
 	method libreGluten() { return true }
 }
 
@@ -52,7 +53,7 @@ class Chupetin {
 			peso = peso * 0.9
 		}
 	}
-	method gusto() { return naranja }
+	method sabor() { return naranja }
 	method libreGluten() { return true }
 }
 
@@ -70,7 +71,7 @@ class Oblea {
 			peso = peso - (peso * 0.25)
 		}
 	}	
-	method gusto() { return vainilla }
+	method sabor() { return vainilla }
 	method libreGluten() { return false }
 }
 
@@ -85,7 +86,7 @@ class Chocolatin {
 	method precio() { return pesoInicial * 0.50 }
 	method peso() { return (pesoInicial - comido).max(0) }
 	method mordisco() { comido = comido + 2 }
-	method gusto() { return chocolate }
+	method sabor() { return chocolate }
 	method libreGluten() { return false }
 
 }
@@ -101,18 +102,18 @@ class GolosinaBaniada {
 		golosinaInterior.mordisco()
 		pesoBanio = (pesoBanio - 2).max(0) 
 	}	
-	method gusto() { return golosinaInterior.gusto() }
+	method sabor() { return golosinaInterior.sabor() }
 	method libreGluten() { return golosinaInterior.libreGluten() }	
 }
 
 
 class Tuttifrutti {
 	var libreDeGluten
-	var gustos = [frutilla, chocolate, naranja]
-	var gustoActual = 0
+	var sabores = [frutilla, chocolate, naranja]
+	var saborActual = 0
 	
-	method mordisco() { gustoActual += 1 }	
-	method gusto() { return gustos.get(gustoActual % 3) }	
+	method mordisco() { saborActual += 1 }	
+	method sabor() { return sabores.get(saborActual % 3) }	
 
 	method precio() { return (if(self.libreGluten()) 7 else 10) }
 	method peso() { return 5 }

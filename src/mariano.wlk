@@ -34,15 +34,15 @@ object mariano {
 	
 	
 	method golosinaDeSabor(_sabor) {
-		return golosinas.find({ golosina => golosina.gusto() == _sabor })
+		return golosinas.find({ golosina => golosina.sabor() == _sabor })
 	}
 	
 	method golosinasDeSabor(_sabor) {
-		return golosinas.filter({ golosina => golosina.gusto() == _sabor })
+		return golosinas.filter({ golosina => golosina.sabor() == _sabor })
 	}
 	
 	method sabores() {
-		return golosinas.map({ golosina => golosina.gusto() }).asSet()
+		return golosinas.map({ golosina => golosina.sabor() }).asSet()
 	}
 
 
@@ -56,12 +56,12 @@ object mariano {
 	}
 
 
-	method gustosFaltantes(_gustosDeseados) {
-		return _gustosDeseados.filter({_gustosDeseado => ! self.tieneGolosinaDeSabor(_gustosDeseado)})	
+	method saboresFaltantes(_saboresDeseados) {
+		return _saboresDeseados.filter({_saborDeseado => ! self.tieneGolosinaDeSabor(_saborDeseado)})	
 	}
 	
-	method tieneGolosinaDeSabor(_gusto) {
-		return golosinas.any({_golosina => _golosina.gusto() == _gusto})
+	method tieneGolosinaDeSabor(_sabor) {
+		return golosinas.any({_golosina => _golosina.sabor() == _sabor})
 	}
 }
 
