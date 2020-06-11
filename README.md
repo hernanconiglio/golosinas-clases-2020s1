@@ -84,11 +84,12 @@ oblea.mordisco()
 oblea.peso() 
 ```
 
-### Chocolatines VIP y  Chocolatines Premium
-Los chocolatines VIP, son como todos los chocolatines, pero se guardan en una heladera que aporta un coeficiente de humedad (un número entre 0 y 1). Este coeficiente está involucrado para el cálculo del peso: El peso de un chocolatin VIP es el peso que tendría un Chocolatín cualquiera: 
-`(pesoInicial - gramosConsumidos)` multiplicado por  `1 + humedad`. 
+### Chocolatines VIP y Chocolatines Premium
+Los chocolatines VIP, son como todos los chocolatines, pero se guardan en la  heladera de Mariano, que aporta un coeficiente de humedad (un número entre 0 y 1). Este coeficiente está involucrado para el cálculo del peso: El peso de un chocolatin VIP es el peso que tendría un Chocolatín cualquiera: 
+`(pesoInicial - gramosConsumidos)` multiplicado por  `1 + humedad`.  
+Por ejemplo, si el peso inicial de un chocolatín es 200 gramos, se consumieron 50, y la humedad es 0.2, entonces el peso es 150 * 1.2 = 180 gramos.
 
-Los chocolatines Premium son un tipo especial de chocolatines VIP que vienen con una cobertura especial que los hace más resistentes a la humedad. Por lo tanto, La humedad en estos chocolatines es la mitad de la humedad de los chocolatines VIP.
+Los chocolatines Premium son un tipo especial de chocolatines VIP que vienen con una cobertura especial que los hace más resistentes a la humedad. Por lo tanto, La _humedad_ en estos chocolatines es la mitad de la humedad de los chocolatines VIP.
 
 Indicar en cuál clase se encuentra el método que se ejecuta en cada caso, detallando el recorrido que realiza el method lookup.
 
