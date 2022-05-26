@@ -1,8 +1,4 @@
 /*
- * MODIFICACIONES A REVERTIR
- * -------------------------
- * 
- * 
  * Los sabores
  */
 object frutilla { }
